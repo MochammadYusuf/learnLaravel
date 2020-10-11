@@ -1,6 +1,3 @@
 @extends('master.master')
 @section('title', 'Home')
-
-@section('content')
-	Home
-@endsection
+@section('page', 'H o m e')

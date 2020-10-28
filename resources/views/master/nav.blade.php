@@ -6,6 +6,7 @@
 	<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
 			<a class="nav-item nav-link navbar-right scroll" href="/about">About<span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link navbar-right scroll" href="/dashboard">Dashboard</a>
 			<a class="nav-item nav-link navbar-right scroll" href="/data">Data</a>
 			<a class="nav-item nav-link navbar-right scroll" href="/contact">Contact</a>
 		</div>

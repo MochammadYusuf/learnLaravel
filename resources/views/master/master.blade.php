@@ -21,5 +21,9 @@
 		<h1 class="text-center">By Mochammad Yusuf Pratama<br>XII RPL 2 / 13</h1>
 	</div>
 
+	<script src="{{asset('/assets/js/jquery-3.4.1.js')}}"></script>
+	<script src="{{asset('/assets/js/bootstrap.bundle.js')}}"></script>
+	<script src="{{asset('/assets/js/bootstrap.js')}}"></script>
+
 </body>
 </html>

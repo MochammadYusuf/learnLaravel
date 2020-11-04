@@ -1,9 +1,27 @@
 body {
-	font-family: monospace;
-	background-color: #d9d9d9;
+	font-family: 'Nunito', sans-serif;
+	background-color: #072540;
+	color: #fff;
 }
 
-.jumbotron {
+nav a {
+	font-size: 30px;
+	color: #fff;
+}
+
+nav a:hover {
+	color: #fff;
+}
+
+#underlined:hover {
+	text-decoration: underline;
+}
+
+nav button .navbar-toggler {
+	color: #fff;
+}
+
+/*.jumbotron {
 	height: 568px;
 	margin-bottom: 0%;
 }
@@ -11,4 +29,4 @@ body {
 .jumbotron .main-content {
 	font-size: 170px;
 	text-shadow: 4px 4px white;
-}
+}*/

@@ -13,9 +13,7 @@ Route::get('/about', function() {
 });
 
 // Data
-Route::get('/data', function() {
-	return view('data');
-});
+Route::resource('/datasiswa', 'siswaController');
 
 // Contact
 Route::get('/contact', function() {

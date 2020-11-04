@@ -1,13 +1,17 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark text-light shadow">
-	<a class="navbar-brand scroll" href="/">Task Yusuf</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-		<div class="navbar-nav">
-			<a class="nav-item nav-link navbar-right scroll" href="/about">About<span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link navbar-right scroll" href="/data">Data</a>
-			<a class="nav-item nav-link navbar-right scroll" href="/contact">Contact</a>
+<nav class="navbar navbar-expand-lg">
+	<div class="container">
+		<a class="navbar-brand scroll" href="/" style="font-size: 25px;">
+			<img src="/image/logo_smk.png" width="40" height="40" class="d-inline-block align-top">
+			SEMKANISA</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link navbar-right scroll" href="/about" id="underlined">About<span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link navbar-right scroll" href="/datasiswa" id="underlined">Data Siswa</a>
+				<a class="nav-item nav-link navbar-right scroll" href="/contact" id="underlined">Contact</a>
+			</div>
 		</div>
 	</div>
 </nav>

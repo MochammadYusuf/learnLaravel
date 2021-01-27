@@ -63,7 +63,8 @@ class siswaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $getSiswa = siswa::find($id);
+        return view('siswa.editsiswa', compact('getSiswa'));
     }
 
     /**
@@ -75,7 +76,8 @@ class siswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        siswa::updateOrCreate(['id' => $id], request()->all());
+        return redirect()->route('datasiswa.index');
     }
 
     /**
@@ -86,6 +88,9 @@ class siswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = siswa::find($id);
+        $siswa->delete();
+
+        return redirect()->route('datasiswa.index');
     }
 }

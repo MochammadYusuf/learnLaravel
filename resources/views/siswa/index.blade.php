@@ -23,8 +23,8 @@
 				<td>{{ $s->nama }}</td>
 				<td>{{ $s->alamat }}</td>
 				<td style="width: 1%; white-space: nowrap;">
-					<a class="btn btn-sm btn-warning" href="#">Edit</a>
-					<a class="btn btn-sm btn-danger" href="#">Delete</a>
+					<a class="btn btn-sm btn-warning" href="/datasiswa/{{$s->id}}/edit">Edit</a>
+					<a class="btn btn-sm btn-danger" href="/datasiswa/{{$s->id}}/destroy">Delete</a>
 				</td>
 			</tr>
 			@endforeach

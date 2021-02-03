@@ -11,14 +11,23 @@
 			  <div class="form-group">
 			    <label for="inputEmail4">NISN</label>
 			    <input type="number" class="form-control" name="nisn" value="{{ $getSiswa->nisn }}">
+			    @error('nisn')
+			    	<div class="small text-light">{{ $message }}</div>
+			    @enderror
 			  </div>
 			  <div class="form-group">
 			    <label for="inputAddress">Nama</label>
 			    <input type="text" class="form-control" name="nama" value="{{ $getSiswa->nama }}">
+			    @error('nama')
+			    	<div class="small text-light">{{ $message }}</div>
+			    @enderror
 			  </div>
 			  <div class="form-group">
 			    <label for="inputAddress2">Alamat</label>
 			    <input class="form-control" type="text" name="alamat" value="{{ $getSiswa->alamat }}"></input>
+			    @error('alamat')
+			    	<div class="small text-light">{{ $message }}</div>
+			    @enderror
 			  </div>
 			  <button type="submit" class="btn btn-primary">Simpan</button>
 			</form>

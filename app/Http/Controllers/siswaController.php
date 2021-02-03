@@ -17,6 +17,7 @@ class siswaController extends Controller
        
         $siswa = siswa::all();
         return view('siswa.index', compact('siswa'));
+
     }
 
     /**
@@ -29,6 +30,7 @@ class siswaController extends Controller
         // untuk menampilkan form tambah data siswa
         
         return view('siswa.tambahsiswa');
+
     }
 
     /**
@@ -39,9 +41,16 @@ class siswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $validatedStore = $request->validate([
+            'nisn' => 'required|numeric|digits:10',
+            'nama' => 'required|max:255',
+            'alamat' => 'required|max:255',
+        ]);
+
         siswa::create($request->all());
-        return redirect()->route('datasiswa.index');
+        return redirect()->route('datasiswa.index')->with('alert', 'Data Siswa ' . $request->nama . ' berhasil ditambahkan!');
+    
     }
 
     /**
@@ -63,8 +72,10 @@ class siswaController extends Controller
      */
     public function edit($id)
     {
+
         $getSiswa = siswa::find($id);
         return view('siswa.editsiswa', compact('getSiswa'));
+
     }
 
     /**
@@ -76,8 +87,16 @@ class siswaController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $validatedStore = $request->validate([
+            'nisn' => 'required|numeric|digits:10',
+            'nama' => 'required|max:255',
+            'alamat' => 'required|max:255',
+        ]);
+
         siswa::updateOrCreate(['id' => $id], request()->all());
-        return redirect()->route('datasiswa.index');
+        return redirect()->route('datasiswa.index')->with('alert', 'Data Siswa ' . $request->nama . ' berhasil diedit!');
+
     }
 
     /**
@@ -88,9 +107,11 @@ class siswaController extends Controller
      */
     public function destroy($id)
     {
+
         $siswa = siswa::find($id);
         $siswa->delete();
 
-        return redirect()->route('datasiswa.index');
+        return redirect()->route('datasiswa.index')->with('alert', 'Data berhasil dihapus!');
+
     }
 }

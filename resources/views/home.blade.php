@@ -1,91 +1,42 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/image/logo_smk.png">
+@extends('master.master')
+@section('title', 'Home')
 
-        <title>Home</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #072540;
-                color: #fff;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-
-            img {
-            	width: 120px;
-            }
-
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-            	<img src="/image/logo_smk.png">
-                <div class="title m-b-md">
-                    Data Siswa Semkanisa
-                </div>
-
-                <div class="links">
-                	<a href="/datasiswa">Data Siswa</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                    <a href="http://www.smkn1-sby.sch.id/">Semkanisa</a>
-                    <a href="https://www.instagram.com/semkanisanet/">Instagram</a>
-                    <a href="https://github.com/MochammadYusuf">GitHub</a>
-                </div>
+@if(session('alert'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session('alert') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+<div class="jumbotron jumbotron-fluid mb-1" style="background-color: #072540">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Selamat Datang!!!</h1>
+                <h1>Anda Login Sebagai Admin.</h1>
+                <p>Klik <i>Lihat Data Siswa</i> untuk melihat data.</p>
+                <a class="btn btn-info" href="/datasiswa">Lihat Data Siswa</a>
+            </div>
+            <div class="col-md-5 text-center">
+                <img src="/image/logo_smk.png" height="190px">
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+<div class="container">
+    <div class="row">   
+        <div class="col-md-12 text-center">
+            <p class="" style="font-size: 20px;"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat... .</i></p>
+            <a class="btn btn-info" href="/about">Lanjut Membaca</a>
+        </div>
+    </div>
+</div>
+
+@endsection

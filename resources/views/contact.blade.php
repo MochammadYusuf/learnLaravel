@@ -23,7 +23,7 @@
 			  </div>
 			  <div class="form-group">
 			    <label for="inputAddress2">Comment</label>
-			    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+			    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 			  </div>
 			  <div class="form-group">
 			    <div class="form-check">
